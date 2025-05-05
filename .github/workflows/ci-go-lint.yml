@@ -42,7 +42,7 @@ jobs:
         with:
           go-version: ${{ env.GOVERSION }}
       - name: Go Cache (Linux)
-        uses: actions/cache@v4.2.2
+        uses: actions/cache@d4323d4df104b026a6aa633fdb11d772146be0bf # v4.2.2
         with:
           path: |
             ~/.cache/go-build
@@ -60,7 +60,7 @@ jobs:
           only-new-issues: true
           args: --timeout=10m
       - name: Run Staticcheck
-        uses: dominikh/staticcheck-action@v1.3.0
+        uses: dominikh/staticcheck-action@ba605356b4b29a60e87ab9404b712f3461e566dc # v1.3.0
         with:
           version: "latest"  # Using the latest stable version
           install-go: false # Use the Go version we already set up
